@@ -1,10 +1,27 @@
 {
   "name": "phaser-trail-renderer",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Trail renderer component for use in the Phaser js HTML5/Javascript/Typescript game engine.",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch"
+  },
   "repository": "https://github.com/slonermike/phaser-trail-renderer",
-  "author": "Mike Slone <slonersoft@gmail.com>",
+  "author": "Mike Slone <https://slone.tech>",
   "license": "MIT",
-  "private": null
+  "peerDependencies": {
+    "phaser": "^3.80.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.2",
+    "phaser": "^3.90.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
 }
